@@ -3,7 +3,7 @@ import Weather from './components/Weather'
 export default class App extends React.Component {
   render() {
     return (
-      <Weather />
+      <Weather zipCode="90110"/>
     );
   }
 }
