@@ -28,11 +28,15 @@ export default class Weather extends React.Component {
             .catch((error) => {
                 console.warn(error);
             });
-    }
+    } 
 
     componentDidMount = () => this.fetchData()
 
-
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.zipCode !== this.props.zipCode) {
+            this.fetchData()
+        }
+    }
 
 
     render() {
@@ -61,6 +65,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-          
+
     },
 });

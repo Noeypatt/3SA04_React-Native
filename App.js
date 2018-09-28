@@ -9,6 +9,7 @@ const RootStack = createStackNavigator({
 }, 
   {
     initialRouteName: 'Weather',
+    initialRouteParams: {zipCode: '90110'}
   })
 export default class App extends React.Component {
   render() {
